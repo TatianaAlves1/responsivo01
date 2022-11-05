@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Site - UC14 (Index2222)</title>
+   <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="stylesheet" href="./assets/css/blocos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>   
+        .header{ 
+            align-items: center;
+            display:flex; 
+            justify-content: space-around;
+            background-color: var(--cor-bg-principal);
+            min-height:95px;
+            padding: 10px 15px;
+        }
+        .logo-site{
+            color: var(--cor-titulo);
+            font-size: 2.5rem;
+            font-family:var(--font-titulo);
+        }
+        .lista-menu{
+            display: flex;
+            list-style-type: none;
+        }
+        .item-menu{
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .link-menu{
+            color: var(--cor-txt);
+            font-size: 1.3rem;
+            text-decoration: none;
+            text-transform:capitalize;
+        }
+       .teste{display:flex; align-items:center;width:100%;justify-content:space-between;}
+       .icone-menu{font-size: 2.8rem; display: none; flex-shrink: 0;}
+       .menu{display:flex;}
+       .item-menu:hover{background-color: rgba(0, 0, 0, 0.171);}
+       .active{display: block;}
+       @media screen and (max-width:768px) {
+        .header{ 
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10px 15px;
+        }
+        .lista-menu{
+            flex-direction: column;
+        }
+        .item-menu{
+            text-align: center;
+            width: 100vw;
+            display: none;
+        }
+       .teste{display:flex; align-items:center;width:100%;justify-content:space-between;}
+       .icone-menu{font-size: 2.8rem; display: block;}
+       .menu{display:flex;}
+       .item-menu:hover{background-color: rgba(0, 0, 0, 0.171);}       
+       }
+       .active{display: block;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="teste">
+            <h2 class="logo-site">logo do site</h2>
+            <span id="ic" class="material-symbols-outlined icone-menu">menu</span>
+         </div>
+        <nav class="menu">
+            <ul class="lista-menu">
+                <li class="item-menu"><a href="#" class="link-menu">Principal</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Serviços</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Clientes</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Fale Conosco</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+    <script>
+        const btMenu = document.getElementById('ic');
+        const links  = document.getElementsByClassName('item-menu');
+        btMenu.addEventListener('click',()=>{
+            for(i=0;i<=links.length;i++){
+                links[i].classList.toggle('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

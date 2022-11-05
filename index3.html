@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Site - UC14 (Index)</title>
+   <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="stylesheet" href="./assets/css/blocos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="teste">
+            <h2 class="logo-site">logo do site</h2>
+            <span id="ic" class="material-symbols-outlined icone-menu">menu</span>
+        </div>
+        <nav class="menu">
+            <ul class="lista-menu">
+                <li class="item-menu"><a href="#" class="link-menu">Principal</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Serviços</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Clientes</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Fale Conosco</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <img src="./assets/img/img03.jpg" alt="" class="foto-banner">
+            <h2 class="txt-banner">Venhaaaaaa para o comunismo!!!!</h2>
+        </section>
+        <section class="blocos">
+            <div class="card-bloco">
+                <img src="./assets/img/img04.jpg" alt="">
+                <h3>texto bloco 01</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptas repudiandae, dignissimos beatae odio asperiores quasi impedit inventore quia, perspiciatis voluptatum ipsa natus suscipit rem temporibus unde. A, autem dolores!</p>
+            </div>
+            <div class="card-bloco">
+                <img src="./assets/img/img05.jpg" alt="">
+                <h3>texto bloco 02</h3>
+                <p>Qui, asperiores dicta molestiae numquam perferendis inventore maiores ratione vitae temporibus culpa illum? Doloremque rem consequuntur sequi nisi tempora amet exercitationem omnis voluptatibus maxime non illo voluptatum optio, et ab!</p>
+            </div>
+            <div class="card-bloco">
+                <img src="./assets/img/img06.jpg" alt="">
+                <h3>texto bloco 03</h3>
+                <p>Incidunt itaque aliquid modi rem molestias, porro et iusto tenetur temporibus asperiores omnis magni culpa, reprehenderit, quam dicta eaque iste ad ut quidem nobis? Dolor rerum earum possimus quia non.</p>
+            </div>
+            <div class="card-bloco">
+                <img src="./assets/img/img04.jpg" alt="">
+                <h3>texto bloco 04</h3>
+                <p>Sit fugiat nobis temporibus facere impedit ut ullam dignissimos illum iste repellat. Voluptatum consequuntur placeat sit officiis in quo laudantium? Consequuntur sapiente placeat molestias facere sequi dolore inventore. Reprehenderit, maiores.</p>
+            </div>
+            <div class="card-bloco">
+                <img src="./assets/img/img05.jpg" alt="">
+                <h3>texto bloco 05</h3>
+                <p>Corporis enim neque pariatur sint fuga labore dolores. Veniam quaerat mollitia explicabo laudantium accusamus tempora magni reiciendis placeat, libero doloribus aut eum perspiciatis deleniti ut reprehenderit quisquam aspernatur vitae eveniet.</p>
+            </div>
+            <div class="card-bloco">
+                <img src="./assets/img/img06.jpg" alt="">
+                <h3>texto bloco 06</h3>
+                <p>Sunt fuga quia doloribus impedit beatae? Provident, dicta eveniet. Nihil error esse omnis corrupti neque cum quasi numquam harum minus blanditiis delectus ducimus cumque, odio voluptate vero dignissimos consequuntur reiciendis.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <script>
+        const btMenu = document.getElementById('ic');
+        const links  = document.getElementsByClassName('item-menu');
+        btMenu.addEventListener('click',()=>{
+            for(i=0;i<=links.length;i++){
+                links[i].classList.toggle('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

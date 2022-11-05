@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo01 - UC14</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+  <style>   
+    .header{/*container*/
+        background-color: rgb(245, 245, 13);
+        padding:10px 0;
+        height:20vh;
+        border-bottom: 2px solid black;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .logo-txt{/*flex-item*/
+        font-size: 2.5rem; 
+        text-transform:uppercase;
+    }
+    .bt-fale{/*flex-item*/
+          border:1px solid rgb(201, 201, 201);
+          height: 50px;
+          justify-self: center;
+          border-radius: 12%;
+          background-color: aqua;
+          border: 1px solid gray;          
+    }
+
+    @media screen and (max-width:768px) {
+        .header{flex-direction:column; background-color: aqua;}
+        .logo-txt{font-size: 1.8rem; font-family:var(--font-titulo); padding-top: 20px;}
+    }
+    @media screen and (max-width:380px){
+        .header{flex-direction:column; background-color:chartreuse; height: auto;}
+        .bt-fale{display:none;}
+    }
+
+  </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo-txt">nome do site</h1>
+        <button class="bt-fale">Fale conosco</button>
+    </header>
+</body>
+</html>

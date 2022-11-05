@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo01 - UC14 (Index2222)</title>
+   <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <style>   
+        .blocos-v{
+          display:grid;
+          grid-template-columns: repeat(4,auto);
+          justify-content: space-evenly;
+          padding: 20px;
+        }
+        .blocov-item{
+          width: 320px;
+          height: 450px;
+          border: 1px solid rgb(216, 216, 216);
+          padding: 10px;
+          box-shadow: 5px 5px 15px gray;
+        }
+        .bloco-img{
+          width: 100%;
+          height: 55%;
+          object-fit: cover;
+        }
+        @media screen and (max-width:998px) {
+          .blocos-v{
+            grid-template-columns: repeat(2,1fr);
+          }
+        }
+        @media screen and (max-width:768px){
+          .blocos-v{
+            grid-template-columns:auto;
+        }
+        .blocov-item{ width: 90%;}
+          
+        }
+
+
+    </style>
+</head>
+<body>
+  <header></header>
+  <main class="conteudo">
+    <section class="blocos-v">
+      <div class="blocov-item">
+        <h3 class="bloco-titulo">título 01</h3>
+        <img src="./assets/img/img04.jpg" alt="" class="bloco-img">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus magnam, hic, ratione ex, amet ducimus sapiente omnis similique odio accusantium quam illo pariatur obcaecati ab neque iusto repellendus iste? Quia!</p>
+      </div>
+      <div class="blocov-item">
+        <h3 class="bloco-titulo">título 02</h3>
+        <img src="./assets/img/img04.jpg" alt="" class="bloco-img">
+        <p>Corporis ab, delectus, animi reprehenderit perspiciatis asperiores ex, unde omnis excepturi nihil praesentium architecto rerum? Rem, velit blanditiis natus, corporis, quas recusandae ducimus facere reprehenderit ab autem consequatur commodi at!</p>
+      </div>
+      <div class="blocov-item">
+        <h3 class="bloco-titulo">título 03</h3>
+        <img src="./assets/img/img04.jpg" alt="" class="bloco-img">
+        <p>Ullam, sit nobis! Alias vitae similique quisquam sequi velit fugit voluptate, voluptatibus reprehenderit, cupiditate asperiores rem aliquam inventore consequuntur laboriosam culpa quasi eligendi est recusandae tempora consectetur, obcaecati repellat! Porro.</p>
+      </div>
+      <div class="blocov-item">
+        <h3 class="bloco-titulo">título 04</h3>
+        <img src="./assets/img/img04.jpg" alt="" class="bloco-img">
+        <p>Recusandae minima illo et non, accusamus impedit mollitia sequi saepe quo eum, reprehenderit eveniet voluptatem! A omnis quos molestiae reprehenderit alias voluptatum ut sunt doloribus quasi illo! Maiores, molestiae aliquam.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
