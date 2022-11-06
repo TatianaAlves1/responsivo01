@@ -23,7 +23,7 @@ family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..2
         .secao1{
             width:inherit;
             padding:25px;display:grid;
-            grid-template-columns:repeat(4,auto);
+            grid-template-columns:repeat(3,1fr);
             align-items:center;
             justify-content:space-evenly;
              gap:15px
@@ -67,8 +67,8 @@ family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..2
         .footer-ic{font-size: 4rem;}
         /*ajuste do header tela pequena*/
 
-       /* @media screen and (max-width:998px) {
-            .header{flex-direction: column;}
+        @media screen and (max-width:998px) {
+            .header{flex-direction: column; width: 100vw;}
             .logo-txt{text-align: center;}
             .menu-lista{flex-direction: column; align-items:center;}
             .menu-ic{display: block;}
@@ -77,16 +77,16 @@ family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..2
             .secao1{grid-template-columns:repeat(2, 1fr);}
             .secao1-bloco{background-color: brown; width: 100%;} 
             .lista-footer{flex-wrap:wrap;  justify-content: center;}
-        }*/
+        }
 
         @media screen and (max-width:760px) {
-            .header{flex-direction: column;}
+            .header{flex-direction: column; width: 100vw;}
             .logo-txt{text-align: center;}
             .menu-lista{flex-direction: column; align-items:center;}
             .menu-ic{display: block;}
             .menu-item{display: none;}
             .active{display: block;}
-            .secao1{grid-template-columns:auto;} 
+            .secao1{grid-template-columns:1fr;} 
             .secao1-bloco{background-color: aquamarine;} 
             .lista-footer{flex-wrap:wrap;  justify-content: center;}
             .secao1-titulo{text-align: center;}
