@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Mobile First</title>
+    <style>
+         *{margin:0;padding:0;box-sizing:border-box;}
+         body,html{ width: 100vw;}
+         .header{display: flex;flex-direction: column; text-align: center;width:100vw; background-color:black; color: white;}
+         .lista-item{padding: 5px 10px;width: 100vw;display: none;}
+         .lista-link{text-decoration:none;color: white;}
+         .lista-item:hover,#ic:hover{background-color: aquamarine;}
+         .lista-link:hover{color: black;}
+         #ic{font-size: 2rem;}
+         .ativar{display: block;}
+         .bloco1{
+            height: 70vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            padding: 10px 0;
+            row-gap: 10px;
+         }
+         .bloco1-div{
+            border: 1px solid rgb(223, 223, 223);
+         }
+         .bloco1-img{
+            width: 60%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            border: 5px solid rgb(4, 4, 214);
+            margin-top: 10px;
+         }
+         .bloco1-titulo{
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 5px 0;
+         }
+         .bloco1-p{
+            text-align: justify;
+            padding: 10px;
+         }
+         @media screen and (min-width:998px) {
+            .header{
+                flex-direction:row;
+                width:100vw; 
+                height: 10vh;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .lista-item{display: block; width:auto;}
+            .nav-lista{display: flex;}
+            #ic{display: none;}
+            .bloco1{
+                grid-template-columns: repeat(3,1fr);
+                align-items: center;
+                justify-content: center;    
+            }
+            .bloco1-div{
+                width: 400px;
+                margin: 0 auto;
+            }
+         }
+    </style>
+</head>
+<body>
+   <header class="header">
+    <h1 class="logo">Site</h1>
+    <div>
+        <span id="ic" class="material-symbols-outlined menu-ic">menu</span>
+    </div>
+    <nav class="nav">
+        <ul class="nav-lista">
+            <li class="lista-item"><a href="#" class="lista-link">link01</a></li>
+            <li class="lista-item"><a href="#" class="lista-link">link02</a></li>
+            <li class="lista-item"><a href="#" class="lista-link">link03</a></li>
+            <li class="lista-item"><a href="#" class="lista-link">link04</a></li>
+        </ul>
+    </nav>
+   </header>
+   <main>
+    <section class="bloco1">
+            <div class="bloco1-div">
+                <img src="assets/img/img01.jpg" alt="" class="bloco1-img">
+                <h4 class="bloco1-titulo">Modelo 01</h4>
+                <p class="bloco1-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laudantium aut exercitationem, magni dicta assumenda obcaecati quia, in officiis est animi sint, iure inventore eius doloremque cumque perspiciatis. Tempora, deserunt.</p>
+            </div>
+            <div class="bloco1-div">
+                <img src="assets/img/img01.jpg" alt="" class="bloco1-img">
+                <h4 class="bloco1-titulo">Modelo 02</h4>
+                <p class="bloco1-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quos porro aut velit, officiis quaerat ratione! Saepe recusandae exercitationem vero provident consequatur consectetur omnis ipsam? Sequi non saepe minima ullam.</p>
+            </div>
+            <div class="bloco1-div">
+                <img src="assets/img/img01.jpg" alt="" class="bloco1-img">
+                <h4 class="bloco1-titulo">Modelo 03</h4>
+                <p class="bloco1-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ducimus necessitatibus perferendis voluptate. Sequi assumenda, fuga explicabo fugit veniam beatae cum sunt omnis officia, quo quibusdam aliquam quaerat asperiores error.</p>
+            </div>
+    </section>
+   </main>
+   <script>
+    const icone = document.getElementById('ic');
+    const links = document.getElementsByClassName('lista-item');
+    icone.addEventListener('click',()=>{
+        for(i=0;i<=links.length;i++){
+            links[i].classList.toggle('ativar');
+        }
+    });
+   </script>
+</body>
+</html>
