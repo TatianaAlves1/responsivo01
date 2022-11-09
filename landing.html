@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <style>
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        .header{
+            min-height:12vh;
+            padding:20px 10px;
+            background-color: rgb(231, 231, 2); 
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .menu-ic{font-size:2rem;display:none;}
+        .menu-lista{display: flex; list-style:none;}
+        .menu-item{padding: 10px;}
+        .menu-link{text-decoration: none;font-size: 1.4rem;}
+
+     .swiper {
+        width: 100%;
+        height: 65vh;
+        position: relative;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(30%);
+      }
+      .titulo-swiper{
+        position: absolute;
+        font-size: 4rem;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index:2;
+        color: #fff;
+      }
+      .txt-swiper{
+        position: absolute;
+        font-size: 1.5rem;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index:2;
+        color: #fff;
+      }
+      .bloco2{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows: minmax(23vh,auto);
+        column-gap: 1px;
+        justify-content: center;
+        align-items: center;
+      }
+      .servicos{
+        background-color: black;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo-txt">Logo site</h1>
+        <div>
+            <span id="ic" class="material-symbols-outlined menu-ic">menu</span>
+        </div>
+        <nav class="menu">
+        <ul class="menu-lista">
+            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Serviços</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Sobre</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Fale Conosco</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+<section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/img07.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img09.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img10.jpg" alt="">
+              </div>
+              <div class="swiper-slide"><img src="img/oculos1.jpg" alt=""></div>
+              <div class="swiper-slide">
+                <img src="img/oculos2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/oculos3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/oculos4.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img09.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/img07.jpg" alt="">
+              </div>
+            </div>
+            <h2 class="titulo-swiper">Texto padrão - vai</h2>
+            <p class="txt-swiper">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error pariatur sunt beatae voluptates ullam saepe quaerat necessitatibus provi</p>
+          </div>
+</section>
+<section class="bloco2">
+    <div class="servicos">
+        <h3 class="titulo-servicos">txt01</h3>
+    </div>
+    <div class="servicos">
+        <h3 class="titulo-servicos">txt02</h3>
+    </div>
+    <div class="servicos">
+        <h3 class="titulo-servicos">txt03</h3>
+    </div>
+    <div class="servicos">
+        <h3 class="titulo-servicos">txt04</h3>
+    </div>
+</section>    
+    
+
+    </main>
+
+
+    
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+
+</body>
+</html>
